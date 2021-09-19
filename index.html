@@ -1,45 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
-    <header class="headerBgGreen">GHBDTN</header>
-    <nav>
-        <ul>
-            <li>Инструменты разработки</li>
-            <li><a href="htmlTags.html">Html</a> / английский а2-b1 </li>
-            <li>CSS</li>
-            <li>iframe</li>
-            <li>less, sass html 2.0 и 5.0</li>
-            <li>chrome debugger</li>
-            <li>bootstrap</li>
-            <li>JavaScript</li>
-            <li>oop, ecma6</li>
-            <li>git gitflow</li>
-            <li>node js</li>
-            <li>react + typescript</li>
-            <li>vue + typescript</li>
-            <li>базы данных mysql</li>
-            <li>Rest Api</li>
-            <li>Тестирование</li>
-            <li>ci/cd</li>
-            <li>сборка</li>
-            <li>сложности алгоритмов</li>
-            <li>облако, aws, ec2, s3</li>
-            <li>docker, kubernetes</li>
-            <li>Solid, grasp, extreme probleme, patterns, GoF</li>
-        </ul>
+  <body>
+    <header class="headerBgGreen">Заглавное меню</header>
+    <nav class="navBgBlue">
+      <ul>
+        <li>Инструменты разработки</li>
+        <li><a href="htmlTags.html">Html</a> / английский а2-b1</li>
+        <li>CSS</li>
+        <li>iframe</li>
+        <li>less, sass html 2.0 и 5.0</li>
+        <li>chrome debugger</li>
+        <li>bootstrap</li>
+        <li>JavaScript</li>
+        <li>oop, ecma6</li>
+        <li>git gitflow</li>
+        <li>node js</li>
+        <li>react + typescript</li>
+        <li>vue + typescript</li>
+        <li>базы данных mysql</li>
+        <li>Rest Api</li>
+        <li>Тестирование</li>
+        <li>ci/cd</li>
+        <li>сборка</li>
+        <li>сложности алгоритмов</li>
+        <li>облако, aws, ec2, s3</li>
+        <li>docker, kubernetes</li>
+        <li>Solid, grasp, extreme probleme, patterns, GoF</li>
+      </ul>
     </nav>
-    <main></main>
-    <footer></footer>
+    <main class="mainBgYellow">
+      <form action="Barber">
+        <label>Записаться онлайн</label><br>
+        <label>тип стрижки:</label>
+        <select name="typeStriski">
+          <option value="1">Синий</option>
+          <option value="2">Зеленый</option>
+          <option value="3">Желтый</option>
+          <option value="4">Красный</option>
+          <option value="5">Оранжевый</option>
+          <option value="6">Черный</option>
+        </select><br>
+        <label>уровень специалиста</label><br>
+        <input
+          id="radio_stashor"
+          name="spesLevel"
+          type="radio"
+          value="1"
+        />
+        <label for="radio_stashor">Стажёр</label><br />
+        <input
+          id="radio_barber"
+          name="spesLevel"
+          type="radio"
+          value="2"
+        />
+        <label for="radio_barber">барбер</label><br />
+        <input
+          id="radio_vipBarber"
+          name="spesLevel"
+          type="radio"
+          value="3"
+        />
+        <label for="radio_vipBarber">вип барбер</label><br>
+        <label>Дополнительные услуги</label><br>
+        <input name="massagHead" type="checkbox" />
+        <label for="massagHead">Массаж головы</label>
+        <input name="dengerous" type="checkbox" />
+        <label for="dengerous">Опасная бритва</label><br>
+        <label>Дата и <span class="footerBgSS">время</span> записи</label><br>
+        <input type="date" name="formDataZapis" id="formDataZapis">
 
-</body>
-
+      </form>
+    </main>
+    <footer class="footerBgSS">Информация о фирме</footer>
+  </body>
 </html>
