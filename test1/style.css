@@ -1,0 +1,44 @@
+.conteiner{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.headerTop{
+    background-color: #9d9d9d;
+    flex: 100%;
+}
+
+.headerContact{
+
+}
+.headerContur{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.headerLogo{
+    background-color: teal;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.headerMenu{
+    background-color: violet;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.saitBarLeft{
+    background-color: turquoise;
+    flex: 20%;
+}
+
+.contentStyle{
+    background-color: gray;
+    flex: 80%;
+}
+
+.footerBotton{
+    background-color: green;
+    flex: 100%;
+}
