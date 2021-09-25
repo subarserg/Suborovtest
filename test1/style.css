@@ -9,12 +9,11 @@
     flex: 100%;
 }
 
-.headerContact{
-
-}
 .headerContur{
     margin-left: 5%;
     margin-right: 5%;
+    display: flex;
+    
 }
 
 .headerLogo{
@@ -27,6 +26,33 @@
     background-color: violet;
     margin-left: 5%;
     margin-right: 5%;
+}
+
+.headerConturCall{
+    background-color: cornflowerblue;
+    flex: 40%;
+}
+
+.headerConturMain{
+    background-color: darkkhaki;
+    flex: 60%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+}
+.headerPadding{
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    border-right: 1px solid black;
+    
+}
+
+.headerPadding2{
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 600;
 }
 .saitBarLeft{
     background-color: turquoise;
