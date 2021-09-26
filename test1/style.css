@@ -1,70 +1,133 @@
-.conteiner{
-    display: flex;
-    flex-wrap: wrap;
-    
+.conteiner {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.headerTop{
-    background-color: #9d9d9d;
-    flex: 100%;
+.headerTop {
+  background-color: #9d9d9d;
+  flex: 100%;
 }
 
-.headerContur{
-    margin-left: 5%;
-    margin-right: 5%;
-    display: flex;
-    
+.contur {
+  margin-left: 5%;
+  margin-right: 5%;
+  display: flex;
 }
 
-.headerLogo{
-    background-color: teal;
-    margin-left: 5%;
-    margin-right: 5%;
+.headerLogo {
+  background-color: teal;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
-.headerMenu{
-    background-color: violet;
-    margin-left: 5%;
-    margin-right: 5%;
+.headerMenu {
+  background-color: violet;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
-.headerConturCall{
-    background-color: cornflowerblue;
-    flex: 40%;
+.headerConturCall {
+  flex: 40%;
+  display: flex;
+  align-items: center;
 }
 
-.headerConturMain{
-    background-color: darkkhaki;
-    flex: 60%;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-
+.headerConturMain {
+  flex: 60%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
 }
-.headerPadding{
-    padding: 20px;
-    font-size: 20px;
-    font-weight: 600;
-    border-right: 1px solid black;
-    
+.headerPadding {
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  border-right: 1px solid black;
 }
 
-.headerPadding2{
-    padding: 20px;
-    font-size: 20px;
-    font-weight: 600;
-}
-.saitBarLeft{
-    background-color: turquoise;
-    flex: 20%;
+.headerPadding:hover {
+  color: white;
+  background-color: gray;
 }
 
-.contentStyle{
-    background-color: gray;
-    flex: 80%;
+.headerPadding2 {
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 600;
 }
 
-.footerBotton{
-    background-color: green;
-    flex: 100%;
+.headerPaddingNumber {
+  color: orange;
+}
+
+.box-1 {
+  flex: 30%;
+  display: flex;
+  align-items: center;
+}
+
+.box-2 {
+  flex: 30%;
+  font-size: 18px;
+}
+
+.box-3 {
+  flex: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box-4 {
+  flex: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  height: 120px;
+}
+
+.textLogo {
+  font-size: 25px;
+  font-weight: 700;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.korzinaSearch {
+  width: 100%;
+}
+
+.saitBarLeft {
+  background-color: turquoise;
+  flex: 20%;
+}
+
+.contentStyle {
+  background-color: gray;
+  flex: 80%;
+}
+
+.conturTovar {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.boxTovar-1, .boxTovar-2, .boxTovar-3, .boxTovar-4  {
+  flex: 20%;
+}
+
+.boxTovar-1 span, .boxTovar-2 span, .boxTovar-3 span, .boxTovar-4 span {
+  }
+
+.conturTovar img{
+    width: 300px;
+}
+.footerBotton {
+  background-color: green;
+  flex: 100%;
 }

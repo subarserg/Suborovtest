@@ -1,38 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Архитектура и дизайн фирмы</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body class="conteiner">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="conteiner">
     <header class="headerTop">
-        <div class="headerContact">
-            <div class="headerContur">
-                <div class="headerConturMain">
-                    <div><span class="headerPadding">Главная</span></div>
-                    <div><span class="headerPadding">Корзина</span></div>
-                    <div><span class="headerPadding">Оформление заказа</span></div>
-                    <div><button class="headerPadding">Перезвонить</button></div>
-                </div>
-                <div class="headerConturCall">
-                    <span class="headerPadding2">Звоните (ежедневно с 9 до 23): 8 (495) 191-31-58</span>
-                </div>
-            </div>
+      <div class="headerContact">
+        <div class="contur">
+          <div class="headerConturMain">
+            <div><span class="headerPadding">Главная</span></div>
+            <div><span class="headerPadding">Корзина</span></div>
+            <div><span class="headerPadding">Оформление заказа</span></div>
+            <div><button class="headerPadding">Перезвонить</button></div>
+          </div>
+          <div class="headerConturCall">
+            <span class="headerPadding2"
+              >Звоните (ежедневно с 9 до 23):
+              <span class="headerPaddingNumber">8 (495) 191-31-58</span></span
+            >
+          </div>
         </div>
-        <div class="headerLogo">на костре</div>
-        <div class="headerMenu">тандыры</div>
+      </div>
+
+      <div class="contur">
+        <div class="box-1">
+          <img
+            class="image"
+            src="https://belfermer.by/image/cache/data/tandyry/esaul/tandyr_esaul_1-500x500.jpg"
+            alt="na-kostre.ru"
+          />
+          <span class="textLogo">NA-KOSTRE.RU</span>
+        </div>
+        <div class="box-2">
+          <ul>
+            <li>Доставка за 24 часа по Москве и МО</li>
+            <li>Все товары в наличии</li>
+            <li>Работаем в праздники и выходные</li>
+            <li>Можете приехать, посмотреть и купить</li>
+          </ul>
+        </div>
+        <div class="box-3">
+          <input type="search" />
+        </div>
+        <div class="box-4">
+          <select name="Korzina" class="korzinaSearch">
+            <option>Тандыр1</option>
+            <option>Тандыр2</option>
+            <option value="Тандыр3">Тандыр3</option>
+          </select>
+        </div>
+      </div>
+      <div class="headerMenu">тандыры</div>
     </header>
-    <nav class="saitBarLeft">
-        nav ПАНЕЛЬ
-    </nav>
+    <nav class="saitBarLeft">nav ПАНЕЛЬ</nav>
     <main class="contentStyle">
-        MAIN CONTENT
+            <div class="conturTovar">
+                <div class="boxTovar-1"><img src="https://images.ru.prom.st/435438155_w640_h640_tandyr-srednij-komplekt.jpg" alt=""><span>Комплекты</span></div>
+                <div class="boxTovar-2"><img src="https://tandyr.pro/upload/products/2810236.png" alt=""><span>Большие</span></div>
+                <div class="boxTovar-3"><img src="https://sauna-perm.ru/image/cache/catalog/image/catalog/product/L1-1-700x700.png" alt="">Средние</div>
+                <div class="boxTovar-4"><img src="https://images.ru.prom.st/435438155_w640_h640_tandyr-srednij-komplekt.jpg" alt="">Малые</div>
+            </div>
     </main>
-    <footer class="footerBotton">
-        FOOTER 
-    </footer>
-</body>
+    <footer class="footerBotton">FOOTER</footer>
+  </body>
 </html>
