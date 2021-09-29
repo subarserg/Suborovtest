@@ -1,0 +1,44 @@
+.conteiner {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-areas:
+    "header header header header"
+    "sidebarLeft main main saitbarRight"
+    "footer footer footer footer";
+    grid-template-columns: 25% 25% 25% 25%;
+}
+.boxHeader-1{
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+.knopkiHeader{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    justify-items: center;
+
+}
+.box-1 {
+  grid-area: header;
+  border: 1px solid black;
+}
+
+.box-2 {
+  grid-area: sidebarLeft;
+  border: 1px solid black;
+}
+
+.box-3 {
+  grid-area: main;
+  border: 1px solid black;
+}
+
+.box-4 {
+  grid-area: saitbarRight;
+  border: 1px solid black;
+}
+
+.box-5 {
+  grid-area: footer;
+  border: 1px solid black;
+}
