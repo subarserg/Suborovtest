@@ -2,22 +2,11 @@
   display: grid;
   grid-gap: 10px;
   grid-template-areas:
-    "header header header header"
-    "sidebarLeft main main saitbarRight"
-    "footer footer footer footer";
-    grid-template-columns: 25% 25% 25% 25%;
-}
-.boxHeader-1{
-    display: grid;
-    grid-template-columns: 70% 30%;
+    'header header header header'
+    'sidebarLeft main main saitbarRight'
+    'footer footer footer footer';
 }
 
-.knopkiHeader{
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    justify-items: center;
-
-}
 .box-1 {
   grid-area: header;
   border: 1px solid black;
@@ -41,4 +30,42 @@
 .box-5 {
   grid-area: footer;
   border: 1px solid black;
+}
+
+.boxHeader-1{
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+.knopkiHeader{
+    display: grid;
+    grid-template-columns: 15% 15% 15% 15% 40%;
+    grid-template-rows: minmax(50px, auto);
+}
+
+.knopkiHeader div{
+  background-color: indigo;
+  justify-self: center;
+  align-self: center;
+  border-right: 1px solid black ;
+}
+
+
+.podsvetkaHeader:hover{
+  grid-column-start: 3;
+  color: beige;
+  background-color: coral;
+}
+
+.telephonesHeader {
+  justify-self: center;
+  align-self: center;
+}
+.boxHeader-2 img{
+  height: 100px;
+}
+
+.boxHeader-2{
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
 }
