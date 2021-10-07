@@ -78,10 +78,128 @@ console.log(`false`)
 for(let i=2; i<=14; i++){
     console.log(`sergey`+i);
 }*/
+let risPachekZaRaz = 2;
+let risDaysEat = 3;
+let grechkaPachekZaRaz = 2;
+let grechkaDaysEat = 4;
+let mankaPachekZaRaz = 3;
+let mankaDaysEat = 2;
+let gramms = 500;
+let risGramms = 0;
+let grechkaGramms = 0;
+let mankaGramms = 0;
 
-let morkovNewEveryDay = 10;
-let morkovCell = 15;
-
-for(let morkovSklad = 20; morkovSklad >= 0; morkovSklad - 15){
-    console.log(`end`+morkovSklad)
+if( risDaysEat + grechkaDaysEat + mankaDaysEat > 0 && risPachekZaRaz > 0 && grechkaPachekZaRaz > 0 && mankaPachekZaRaz > 0 ){
+    for(let dayEat = 1; dayEat <= risDaysEat + grechkaDaysEat + mankaDaysEat ; ++dayEat ){
+        if(risDaysEat >= dayEat){
+            if (dayEat%2 == 0){
+                risGramms += risPachekZaRaz * 3 * gramms;
+            } else {
+                risGramms += risPachekZaRaz * 5 * gramms;
+            }
+        }else if(risDaysEat + grechkaDaysEat >= dayEat ){
+            if (dayEat%2 == 0){
+                grechkaGramms += grechkaPachekZaRaz * 3 * gramms;
+            } else {
+                grechkaGramms += grechkaPachekZaRaz * 5 * gramms;
+            }
+        }else if(mankaDaysEat + risDaysEat + grechkaDaysEat >= dayEat){
+            if (dayEat%2 == 0){
+                mankaGramms += mankaPachekZaRaz * 3 * gramms;
+            } else {
+                mankaGramms += mankaPachekZaRaz * 5 * gramms;
+            }
+        }
+    }
+}else{
+    console.log(`он не ел`);
 }
+
+if( risGramms >= grechkaGramms && risGramms >= mankaGramms){
+    console.log(`больше всего риса: ${risGramms}`)
+}else if (grechkaGramms >= risGramms && grechkaGramms >= mankaGramms){
+    console.log(`больше всего гречки: ${grechkaGramms}`)
+}else if (mankaGramms >= risGramms && mankaGramms >= grechkaGramms){
+    console.log(`больше всего манки: ${mankaGramms}`)
+}
+
+
+
+
+const chegoBolsheSel = (risDaysEat, grechkaDaysEat, mankaDaysEat, risPachekZaRaz, grechkaPachekZaRaz, mankaPachekZaRaz, gramms) => {
+    let risGramms = 0;
+    let grechkaGramms = 0;
+    let mankaGramms = 0;
+
+    if( risDaysEat + grechkaDaysEat + mankaDaysEat > 0 && risPachekZaRaz > 0 && grechkaPachekZaRaz > 0 && mankaPachekZaRaz > 0 ){
+        for(let dayEat = 1; dayEat <= risDaysEat + grechkaDaysEat + mankaDaysEat ; ++dayEat ){
+            if(risDaysEat >= dayEat){
+                if (dayEat%2 == 0){
+                    risGramms += risPachekZaRaz * 3 * gramms;
+                } else {
+                    risGramms += risPachekZaRaz * 5 * gramms;
+                }
+            }else if(risDaysEat + grechkaDaysEat >= dayEat ){
+                if (dayEat%2 == 0){
+                    grechkaGramms += grechkaPachekZaRaz * 3 * gramms;
+                } else {
+                    grechkaGramms += grechkaPachekZaRaz * 5 * gramms;
+                }
+            }else if(mankaDaysEat + risDaysEat + grechkaDaysEat >= dayEat){
+                if (dayEat%2 == 0){
+                    mankaGramms += mankaPachekZaRaz * 3 * gramms;
+                } else {
+                    mankaGramms += mankaPachekZaRaz * 5 * gramms;
+                }
+            }
+        }
+    }else{
+        return `он не ел`;
+    }
+    
+    if( risGramms >= grechkaGramms && risGramms >= mankaGramms){
+        return `больше всего риса: ${risGramms}
+        `
+        
+    }else if (grechkaGramms >= risGramms && grechkaGramms >= mankaGramms){
+        return `больше всего гречки: ${grechkaGramms}`
+    }else if (mankaGramms >= risGramms && mankaGramms >= grechkaGramms){
+        return `больше всего манки: ${mankaGramms}`
+    }
+}
+//console.log(chegoBolsheSel(3, 4, 2, 2, 2, 3, 500))
+
+let massivchik = [2, 1, 2, 3, 5, 6 , 8 ];
+let masivDenisov = [5, 6, 5, 7 , 8, 5 ];
+
+const summNumberArray = array => {
+    let summ = 0;
+    if (array.length > 0){
+        for( let i=0; i<=array.length; ++i){
+            if(typeof(array[i]) === `number`){
+                summ += array[i];
+            }
+        }
+        return `общая сумма массива: ${summ}`
+
+    }else{
+        return `массив пуст`
+    } 
+}
+
+//console.log(summNumberArray(massivchik));
+//console.log(summNumberArray(masivDenisov));
+
+
+const summaMassiva = (arrayOne, arrayTwo) =>{
+    if(arrayOne.length > 0 && arrayTwo.length > 0 ){
+        for(let i=0; i < arrayOne.length; ++i){
+            arrayOne[i]+=arrayTwo[i]
+        }
+        return arrayOne
+    }else{
+        return `не правильно`
+    }
+}
+
+console.log(summaMassiva(massivchik, masivDenisov))
