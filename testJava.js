@@ -169,7 +169,7 @@ const chegoBolsheSel = (risDaysEat, grechkaDaysEat, mankaDaysEat, risPachekZaRaz
 }
 //console.log(chegoBolsheSel(3, 4, 2, 2, 2, 3, 500))
 
-let massivchik = [2, 1, 2, 3, 5, 6 , 8 ];
+let massivchik = [2, 1, 2, 3, 5, 6 , 6, 5 ];
 let masivDenisov = [5, 6, 5, 7 , 8, 5 ];
 
 const summNumberArray = array => {
@@ -193,13 +193,43 @@ const summNumberArray = array => {
 
 const summaMassiva = (arrayOne, arrayTwo) =>{
     if(arrayOne.length > 0 && arrayTwo.length > 0 ){
-        for(let i=0; i < arrayOne.length; ++i){
-            arrayOne[i]+=arrayTwo[i]
+        if(arrayOne.length > arrayTwo.length){
+            for (let j=arrayTwo.length + 1; j<=arrayOne.length; ++j){
+                arrayTwo[j] = 0;
+            }
+            for(let i=0; i < arrayOne.length; ++i){
+                arrayOne[i]+=arrayTwo[i]
+                console.log(arrayOne[6]+`,`+arrayTwo[6])
+            }
+            return arrayOne
+        }else{
+            return `ntrcn`
         }
-        return arrayOne
     }else{
         return `не правильно`
     }
 }
 
 console.log(summaMassiva(massivchik, masivDenisov))
+
+let text = 'Привет всем меНя зоВут дима Дмитриев  и мне 34 Года.'
+let textTwo = 'новый текст'
+
+const upgStroka = stroka => {
+    if(stroka.length > 0){
+        let newMassiv = stroka.split(' ');
+        for(let i = 0; i < newMassiv.length ; ++i){
+            if (newMassiv[i] != 'буква большая'){
+                newMassiv[i] = newMassiv[i].toUpperCase();
+            }else{
+                newMassiv[i]+='саня' 
+            }
+        }
+        return newMassiv.join('');
+    }else{
+        return 'строка пуста'
+    }
+    
+}
+
+console.log(upgStroka(textTwo))
