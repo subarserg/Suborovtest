@@ -202,20 +202,20 @@ const upgStroka = (stroka) => {
 
 //(a+b) * PI / b * 100%
 
-const formulaPi = (a, b) => {
+const avans = (colDays, hours) => {
   const PI = 3.14;
-  return (((a + b) * PI) / b) * 100;
+  return (((colDays + hours) * PI) / hours) * 100;
 };
 
-//console.log(formulaPi(2,8))
+//console.log(avans(2,8))
 
 //b + b/2 + b/3 + b/5 - a*b
 
 //a = b*34
 
-const uravnenie = (b) => {
-  let a = b * 34;
-  return b + b / 2 + b / 3 + b / 5 - a * b;
+const premia = (ideal) => {
+  let a = ideal * 34;
+  return ideal + ideal / 2 + ideal / 3 + ideal / 5 - a * ideal;
 };
 //console.log(uravnenie(5))
 
@@ -226,7 +226,7 @@ const zarplata = (days, error) => {
   let nadbavkaDay = 10;
   return (workPrice * timeInDey + nadbavkaDay) * days - error * errorPrice;
 };
-console.log(zarplata(24, 4));
+//console.log(zarplata(24, 4));
 
 //[1, 0, 1, 1, 1, 1, 0]
 
@@ -245,4 +245,91 @@ const sasha = (a) => {
   }
 };
 
-console.log(sasha([1, 0, 1, 1, 1, 1, 0]));
+//console.log(sasha([1, 0, 1, 1, 1, 1, 0]));
+
+/* const название переменной в которой храниться функия = (то, что данная функция принимает) =>{
+  обработка данных
+  return возвращаем выполнения данной функции
+} 
+console.log(название(передаём, то что надо обработать)); */
+
+
+/* function имя функции (то, что данная функция принимает) {
+'это функциия называется function declaration. Может вызываться до объявления функции'
+обработка данных
+return возвращаем результат выполнения данной функции
+}
+console.log(имя функции(передаём, то что надо обработать)) */
+
+
+/* const название переменной в которой храниться функия = function (то, что данная функция принимает){
+  `это функциия называется function expression. Не может вызываться до объявления функции`
+  обработка данных
+  return возвращаем выполнения данной функции
+}
+console.log(название переменной в которой храниться функия(передаём, то что надо обработать)) */
+
+
+/* iife данная функция сама себя вызывает
+ (function (принимаем данные){
+  обработка данных
+  return возвращаем результат выполнения данной функции
+ }(передаём, то что надо обработать) */
+
+ const zpChasti = (rabs, zamBoss, boss, days, error, hours) =>{
+   let rabsZp = rabs*(zarplata(days, error)+premia(3)+avans(days, hours));
+   let zamBossZp = zamBoss*(zarplata(days, error)+premia(3)+avans(days, hours))*3;
+   let bossZp = boss*(zarplata(days, error)+premia(3)+avans(days, hours))*5;
+  return rabsZp + zamBossZp + bossZp
+ }
+//console.log(zpChasti(23, 1, 1, 10, 2, 24))
+
+let stroka = 'Всем привет я узнал что у меня есть огромная собака. Так что будет делать чик.'
+
+const bomba = stroka =>{
+  if(stroka.length>0){
+    if(stroka.includes(`бомба`) == true){
+      return stroka.slice(stroka.indexOf(`бомба`))
+    }else{
+      return `всё мирно`
+    }
+  }else{
+   return `нет текста`
+  }
+}
+//console.log(bomba(stroka))
+
+/* const zamena = stroka =>{
+  if(stroka.length>0){
+    let mass = stroka.split(``);
+    for(let i=0; i<=mass.length; ++i){
+      if(mass[i] == `о`){
+         mass[i] = `А`
+      }
+    }
+    return mass.join(``)
+  }else{
+    return `ничео не делаем`
+  }
+}
+console.log(zamena(stroka)) */
+let strokaTwo = `d ljwhg87 lskj928293 fw3xrg3`
+
+
+const s = stroka =>{
+  if(stroka.length>0){
+    let mass = stroka.split(``);
+    let poisk = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+    for(let i=0; i<=mass.length; ++i){
+      for(let j=0; j<poisk.length; ++j){
+        if(mass[i] == poisk[j]){
+           mass[i] = `sАsha`
+       }
+      }
+    }
+    return mass.join(``);
+  }else{
+    return `ничео не делаем`
+  }
+}
+console.log(s(strokaTwo))
