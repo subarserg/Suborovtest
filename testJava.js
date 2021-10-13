@@ -332,4 +332,103 @@ const s = stroka =>{
     return `ничео не делаем`
   }
 }
-console.log(s(strokaTwo))
+//console.log(s(strokaTwo)) 
+
+let luboiMass = [1, `g`, 8, `h`, 1, `g`, 8, `h`, 91, `g`, 8, `h`, 7]
+
+//luboiMass.foreach(element => {
+   // return element + 10;
+  //});
+
+//console.log(luboiMass);
+
+let newMassiw2 = [6, 4, 2, 3, 4, 5, 6, 7, 8];
+
+let m = newMassiw2.map(el=>el=el*el)
+//console.log(m)
+
+let m2 = newMassiw2.map((el,i)=>{
+  if(i == newMassiw2.length-1){
+    return el
+  }else{
+    return el=el*newMassiw2[i+1];
+  }
+})
+//console.log(m2)
+
+let m3 = [];
+newMassiw2.map((el,i)=>{
+  if((i+1) % 2 == 0){
+    el = el + newMassiw2[i-1];
+    return m3.push(el);
+  }
+})
+
+//console.log(m3)
+
+let arrayStudents = [`sasha`, `serg`, `misha`, `dima`, `masha`, `vova`, `serg`, `dima`];
+
+let bukvi = arrayStudents.map(el=>{
+  return el= el.length
+})
+//console.log(bukvi)
+
+let zamena = arrayStudents.map(el=>{
+  if (el == `serg`){
+      return el = `dima`
+  }else{
+    return el
+  }
+})
+//console.log(zamena)
+
+let igra = [5,6,4,3,5,7,9,2,5,2,0,1,3,5,3,2,6,7,8,3,4,5,5,3,3,4,5,6,2,3,3,7,7,8,2,5,6,4,3,5,6];
+
+let znachenieBeznal = []
+igra.map((el,i)=>{
+  if(el != 0){
+    return znachenieBeznal.push(el)
+  }
+})
+let podschot = znachenieBeznal.map((el,i)=>{
+  if(el + znachenieBeznal[i+1]==10){
+    el = 0;
+    znachenieBeznal[i+1] = 0;
+ }
+ return el
+})
+
+let reshotka = ``
+
+for(let i=1; i<=4; ++i){
+console.log(`# # # #`)
+console.log(` # # # #`)
+}
+
+
+/* for(let i = 1; i<=100; i++){
+  if(i%3 == 0 && i%5== 0){
+    console.log( `FizzBuzz   ` +i);
+  }else if(i%5 == 0){
+    console.log(`Buzz   ` +i);
+  } else if(i%3 == 0){
+    console.log( `Fizz   ` + i)
+
+  }
+}
+
+for() */
+
+const min = (a,b) => a>b ? b : a
+
+
+console.log(min(0, 10));
+console.log(min(0, -10));
+
+
+const isEven = a => a%2 == 0 ? true : false 
+
+
+console.log(isEven(50));
+console.log(isEven(75));
+console.log(isEven(-1));
