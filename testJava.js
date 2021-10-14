@@ -463,31 +463,80 @@ const chek = (client, korzina) => {
   let person = [
     { name: `Dima`, age: 30, money: `68$` },
     { name: `Sasha`, age: 31, money: `8$` },
-    { name: `Serg`, age: 25, money: `108$` },
+    { name: `Serg`, age: 25, money: `10800$` },
     { name: `Masha`, age: 17, money: `90$` },
   ];
   //создаём массив товаров(склад)
   let tovar = [
     { name: `coffee`, price: `4$`, ostatok: 17, error: true },
-    { name: `beer`, price: `3$`, ostatok: 23, error: false },
+    { name: `beer`, price: `90$`, ostatok: 23, error: false },
     { name: `milk`, price: `2$`, ostatok: 13, error: true },
     { name: `bread`, price: `1$`, ostatok: 30, error: true },
   ];
+
+  let textCheka = ``;
   //проверяем условие, если корзина не пуста и клиент присутствует
   if (korzina.length != 0 && client.length != 0) {
     //мы должны узнать, что в корзине(стоимость покупки)
-    let obschaSumma = korzina.reduce((acc, el) => {
-      //запускаем цикл, чтобы сравнить товары(их имена) друг с другом
-      for (let i = 0; i < tovar.length; ++i) {
-        //сравниваем имена, если имена равны, то считаем сумму
-        if (tovar[i].name == el.name) {
-         return acc+=acc+el.coll*parseInt(tovar[i].price.slice(0,tovar[i].price.indexOf(`$`)))
-        }
+    let obschaSumma = 0;
+     
+      
+
+    person.forEach((el) => {
+      if (el.name == client) {
+        korzina.forEach(elVkorzine=>{
+          tovar.forEach((elTovara, i)=>{
+            if (elTovara.name == elVkorzine.name) {
+              if (elTovara.error == false) {
+                if (el.age >= 18) {
+                  obschaSumma +=elVkorzine.coll*parseInt(elTovara.price.slice(0, elTovara.price.indexOf(`$`)))
+                  if (
+                    parseInt(el.money.slice(0, el.money.indexOf(`$`))) >=
+                    obschaSumma
+                  ) {
+                    elTovara.ostatok-=elVkorzine.coll;
+                    textCheka = `Уважаемый клиент:${client} вы успешно оплатили товар на сумму: ${obschaSumma}$ ваш баланс равен: ${
+                      parseInt(el.money.slice(0, el.money.indexOf(`$`))) -
+                      obschaSumma
+                    }$`;
+                  } else {
+                    textCheka = `Уважаемый клиент:${client} вам не хватает суммы: ${
+                      obschaSumma -
+                      parseInt(el.money.slice(0, el.money.indexOf(`$`)))
+                    }$`;
+                  }
+                } else {
+                  textCheka = `Уважаемый клиент: ${client} Вам нет 18`;
+                }
+              } else{
+                obschaSumma +=elVkorzine.coll*parseInt(elTovara.price.slice(0, elTovara.price.indexOf(`$`)))
+                if (
+                  parseInt(el.money.slice(0, el.money.indexOf(`$`))) >=
+                  obschaSumma
+                ) {
+                  elTovara.ostatok-=elVkorzine.coll;
+                  textCheka = `Уважаемый клиент:${client} вы успешно оплатили товар на сумму: ${obschaSumma}$ ваш баланс равен: ${
+                    parseInt(el.money.slice(0, el.money.indexOf(`$`))) -
+                    obschaSumma
+                  }$`;
+                } else {
+                  textCheka = `Уважаемый клиент:${client} вам не хватает суммы: ${
+                    obschaSumma -
+                    parseInt(el.money.slice(0, el.money.indexOf(`$`)))
+                  }$`;
+                }
+              }
+            }
+          })
+        })
+        
       }
-    }, 0);
-    return `success  ${obschaSumma}$`;
+    });
+     
 
+console.log(tovar)
 
+    return textCheka;
   } else if (korzina.length == 0) {
     //если корзина пуста, то
     return `корзина пуста`;
@@ -497,9 +546,9 @@ const chek = (client, korzina) => {
   }
 };
 console.log(
-  chek(`dima`, [
-    { name: `milk`, coll: `6` },
-    { name: `beer`, coll: `4` },
-    { name: `bread`, coll: `3` },
+  chek(`Serg`, [
+    { name: `milk`, coll: 6 },
+    { name: `beer`, coll: 30 },
+    { name: `bread`, coll: 3 },
   ])
 );
