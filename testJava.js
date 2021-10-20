@@ -1,4 +1,4 @@
-/*let name = `sasha`;
+let name = `sasha`;
 let age = 29;
 
 function egg (eggSklad, eggNew){
@@ -49,7 +49,8 @@ const nakormlu = proshu => {
 //&&
 
 function proizvedenie(a,b){
-    return a*b
+    console.log(this)
+  return a*b
 }
 let rez = proizvedenie(3,5)
 console.log(rez)
@@ -77,7 +78,7 @@ console.log(`false`)
 
 for(let i=2; i<=14; i++){
     console.log(`sergey`+i);
-}*/
+}
 
 const chegoBolsheSel = (
   risDaysEat,
@@ -299,7 +300,7 @@ const bomba = (stroka) => {
 };
 //console.log(bomba(stroka))
 
-/* const zamena = stroka =>{
+ const zamena = stroka =>{
   if(stroka.length>0){
     let mass = stroka.split(``);
     for(let i=0; i<=mass.length; ++i){
@@ -312,7 +313,7 @@ const bomba = (stroka) => {
     return `ничео не делаем`
   }
 }
-console.log(zamena(stroka)) */
+console.log(zamena(stroka)) 
 let strokaTwo = `d ljwhg87 lskj928293 fw3xrg3`;
 
 const s = (stroka) => {
@@ -341,7 +342,7 @@ let luboiMass = [1, `g`, 8, `h`, 1, `g`, 8, `h`, 91, `g`, 8, `h`, 7];
 
 //console.log(luboiMass);
 
-/* let newMassiw2 = [6, 4, 2, 3, 4, 5, 6, 7, 8];
+let newMassiw2 = [6, 4, 2, 3, 4, 5, 6, 7, 8];
 
 let m = newMassiw2.map(el=>el=el*el)
 //console.log(m)
@@ -352,9 +353,9 @@ let m2 = newMassiw2.map((el,i)=>{
   }else{
     return el=el*newMassiw2[i+1];
   }
-}) */
+}) 
 //console.log(m2)
-/* 
+
 let m3 = [];
 newMassiw2.map((el,i)=>{
   if((i+1) % 2 == 0){
@@ -372,13 +373,13 @@ let bukvi = arrayStudents.map(el=>{
 })
 //console.log(bukvi)
 
-let zamena = arrayStudents.map(el=>{
+/* let zamena = arrayStudents.map(el=>{
   if (el == `serg`){
       return el = `dima`
   }else{
     return el
   }
-})
+}) */
 //console.log(zamena)
 
 let igra = [5,6,4,3,5,7,9,2,5,2,0,1,3,5,3,2,6,7,8,3,4,5,5,3,3,4,5,6,2,3,3,7,7,8,2,5,6,4,3,5,6];
@@ -418,7 +419,7 @@ console.log(` # # # #`)
 
 for() */
 
-/* const min = (a,b) => a>b ? b : a
+const min = (a,b) => a>b ? b : a
 
 
 console.log(min(0, 10));
@@ -456,7 +457,7 @@ igra.map(el=>{
     return pp.push(el);
   }
 })
-console.log(pp) */
+console.log(pp)
 
 const chek = (client, korzina) => {
   //создаём массив клиентов
@@ -552,3 +553,17 @@ console.log(
     { name: `bread`, coll: 3 },
   ])
 );
+ 
+const AUDI = {funct1: egg,
+funct2: js,
+funct3: upgStroka,
+funct4: proizvedenie}
+
+console.log(AUDI.funct4(5,6))
+
+const MERSEDES = {alisa1: egg,
+  alisa2: js,
+  alisa3: upgStroka,
+  alisa4: proizvedenie}
+
+  console.log(MERSEDES.alisa4(5,6))
